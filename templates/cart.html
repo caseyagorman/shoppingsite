@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
+{% for melon in melon_objects %}
     <table class="table table-striped">
         <thead>
         <tr>
@@ -40,8 +40,8 @@
         </tbody>
     </table>
 
-    <h3>Total: $27.00</h3>
+    <h3>Total: ${{ total }}</h3>
 
     <a href="/checkout" class="btn btn-large btn-primary">Check Out</a>
-
+{% endfor %}
 {% endblock %}
