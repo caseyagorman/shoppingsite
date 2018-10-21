@@ -67,7 +67,7 @@ def show_shopping_cart():
 		total += total_melon
 		melon_objects.append(melon_object) 
 		print(total)
-		print(type(melon_object))	
+		print("quantity", melon_object.quantity)
 	print(melon_objects)	
 	"""Display content of shopping cart."""
 
