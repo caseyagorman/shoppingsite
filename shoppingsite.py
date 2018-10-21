@@ -59,16 +59,12 @@ def show_shopping_cart():
 	total = 0
 	melon_objects = []
 	for melon, quantity in session['cart'].items():
-		print(melon, quantity)
 		melon_object = melons.get_by_id(melon)
 		total_melon = melon_object.price * quantity
 		melon_object.quantity = quantity 
 		melon_object.total = total_melon
 		total += total_melon
-		melon_objects.append(melon_object) 
-		print(total)
-		print("quantity", melon_object.quantity)
-	print(melon_objects)	
+		melon_objects.append(melon_object)	
 	"""Display content of shopping cart."""
 
 	# TODO: Display the contents of the shopping cart.
